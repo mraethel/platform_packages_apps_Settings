@@ -51,10 +51,10 @@ public class FactoryResetPreferenceController extends BasePreferenceController {
         mUm = (UserManager) context.getSystemService(Context.USER_SERVICE);
     }
 
-    /** Hide "Factory reset" settings for secondary users. */
+    /** Hide "Factory reset" settings for ALL users. */
     @Override
     public int getAvailabilityStatus() {
-        return mUm.isAdminUser() ? AVAILABLE : DISABLED_FOR_USER;
+        return DISABLED_FOR_USER;
     }
 
     @Override
